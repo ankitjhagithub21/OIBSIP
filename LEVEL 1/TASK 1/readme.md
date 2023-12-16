@@ -6,7 +6,7 @@ This repository contains the source code for the ZymVibe landing page, developed
 
 
 ## Live Demo
-('''https://zymvibe.netlify.app/''')
+('''https://ankitjhagithub21.github.io/OIBSIP/LEVEL%201/TASK%201/''')
 ## Features
 Navigation: Clear and responsive navigation menu.
 Sections:
