@@ -2,6 +2,11 @@
 
 This repository contains the source code for the ZymVibe landing page, developed as part of Task 1 for the Infobyte Internship. The landing page is designed for a fitness website, showcasing information about ZymVibe, its services, and providing a means for users to get in touch.
 
+![image](https://github.com/ankitjhagithub21/OIBSIP/assets/91364014/29120e49-9c59-4f4b-b906-170fa10b62a9)
+
+
+## Live Demo
+('''https://zymvibe.netlify.app/''')
 ## Features
 Navigation: Clear and responsive navigation menu.
 Sections:
