@@ -56,9 +56,10 @@ nav a {
     font-size: 19px;
 }
 
-.form-control{
+.form-control {
     border-radius: 0px;
 }
+
 .form-control:focus {
     border-color: rgba(100, 100, 100, 1) !important;
     -webkit-box-shadow: none !important;
