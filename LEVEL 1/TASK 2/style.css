@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
+body {
+    color: white;
+    background-color: #111111;
+    font-family: 'Nunito', sans-serif;
+}
+
+span {
+    color: #18f298;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #333;
+
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+    background-color: #0a8c56;
+}
+
+main {
+    width: 75vw;
+
+    position: absolute;
+    right: 0px;
+}
+
+header {
+    height: 100vh;
+    width: 25vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1A1A1A;
+}
+
+header img {
+    width: 160px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 5px solid #0a8c56;
+
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding: 0px 20px;
+}
+
+.navbar a {
+
+    width: 100%;
+}
+
+.btn {
+    background-color: #333;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #0a8c56;
+}
+
+section {
+
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container {
+    padding: 5%;
+}
+
+#home h2 {
+    color: #18f298;
+}
+
+#skills .btn {
+    text-transform: uppercase;
+}
+
+#education .col-md-6 {
+    position: relative;
+
+}
+
+.box {
+    border-left: 3px solid white;
+
+}
+
+.box i {
+    position: absolute;
+    left: -3px;
+    top: 0;
+    font-size: 22px;
+    background-color: white;
+    color: #0a8c56;
+    border-radius: 50%;
+    padding: 10px 8px;
+}
+
+.card {
+    position: relative;
+    border: none;
+    cursor: pointer;
+    margin: 20px 0px;
+
+    overflow: hidden;
+
+}
+
+.card-body {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    color: white;
+
+    top: 100%;
+
+}
+
+.card:hover .card-body {
+    top: 45%;
+}
+
+#contactInfo p {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+}
+
+#contactInfo i {
+    color: #27ce88;
+
+}
+
+.form-control {
+    background-color: #333;
+    outline: none;
+    border: none;
+    color: white !important;
+    font-size: 18px;
+    border-radius: 0px;
+}
+
+.form-control::placeholder {
+    color: #a8a3a1;
+}
+
+.form-control:focus {
+    background-color: #333;
+}
+
+.form-control:focus {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+
+
+}
+
+#socialMedia i:hover {
+    cursor: pointer;
+    
+    color: #0a8c56;
+}
+
+#menuBtn{
+    position: fixed;
+    right: 0px;
+    
+    margin: 10px;
+    cursor: pointer;
+    z-index: 999;
+    background-color: #333;
+    padding: 10px;
+    font-size: 20px;
+    display: none;
+}
+
+
+@media (max-width:768px) {
+    
+    
+    #menuBtn{
+        display: block;
+    }
+    #menu {
+        position: fixed;
+        z-index: 99;
+        width: 100%;
+        left: -100%;
+        transition: left 0.5s;
+        
+    }
+    
+    main {
+        width: 100%;
+    }
+    
+    #menu.active {
+        left: 0;
+    
+
+    }
+}
