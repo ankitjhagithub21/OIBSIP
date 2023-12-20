@@ -2,6 +2,8 @@
 
 This is a simple web-based temperature converter that allows users to input a temperature in Celsius, Fahrenheit, or Kelvin and convert it to another unit. The project includes a user interface with input fields, dropdown menus, and a "Convert" button to trigger the temperature conversion.
 
+![image](https://github.com/ankitjhagithub21/OIBSIP/assets/91364014/ce56e8cb-f1fa-40c9-b75f-19897e6a6c3a)
+
 ## How to Use
 
 1. Open the `index.html` file in a web browser.
