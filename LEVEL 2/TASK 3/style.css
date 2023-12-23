@@ -1,63 +1,150 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+
+::-webkit-scrollbar{
+    display: none;
+}
+body {
+    font-family: 'Signika Negative', sans-serif;
+    background-color: #c8d6e5;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.container h2 {
+    color: #0f5412;
+    font-size: 30px;
     text-align: center;
-    font-family: sans-serif;
+
 }
-.container{
-    margin-top: 20px;
-    max-width: 800px;
-    margin: 20px auto;
-}
-.todo{
+
+#myForm {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    margin: 10px 0px;
-    cursor: pointer;
-    background-color: rgb(6, 57, 128);
-    color: white;
-}
-button{
-    cursor: pointer;
-    outline: none;
-    border: none;
-    padding: 5px;
-    border-radius: 5px;
-}
-h2{
-    margin-bottom: 20px;
-}
-#myForm{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 5px;
+    justify-content: space-between;
+    margin-top: 20px;
 }
-input{
-    padding:10px;
-    border-radius: 5px;
-    font-size: 20px;
-    outline: none;
-    border: 1px solid rgb(6, 57, 128);
-    background-color: whitesmoke;
-    width: 90%;
-}
-#submitBtn{
-    background-color: rgb(6, 57, 128);
-    color: white;
-    font-size: 20px;
+
+#userInput {
+    flex: 1;
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    width: 100%;
+}
+
+#submitBtn {
+    background-color: #137516;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#submitBtn:hover {
+    background-color: #0f5412;
+}
+
+#todoList {
+    margin-top: 20px;
+}
+
+.todo{
+    cursor: pointer;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 19px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+
+
+.btn {
+    
+    color: #fff;
+    border: none;
+    padding: 8px 10px;
+    margin-left: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.remove-btn{
+    background-color: #e74c3c;
+}
+.edit-btn{
+    background-color: rgb(43, 119, 226);
+}
+.check-btn{
+    background-color: rgb(15, 158, 15);
+}
+
+.remove-btn:hover {
+    background-color: #c0392b;
+}
+
+.msg{
+    color: #c0392b;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    
+}
+#menu{
+    position: fixed;
+    top: 0;
+    right: -120%;
+    background-color: whitesmoke;
+    height: 100vh;
+    padding: 20px;
+    width: 200px;
+    transition: 1s;
+}
+#menu h2{
+    font-size: 21px;
+}
+#menuBtn{
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    font-size: 22px;
+    margin: 10px;
+    right: 0;
+    cursor: pointer;
+    color: green;
+}
+#menu.active{ 
+    right: 0%;
+}
+.completed-task{
+    text-decoration: line-through;
+    font-size: 20px;
 }
 
 @media (max-width:768px) {
-    .container{
-        width: 90vw;
+    body{
+        padding: 10px;
+    }
+    #menu{
+        width: 100%;
+    }
+    #menu.active{ 
+        right: -10%;
     }
 }
