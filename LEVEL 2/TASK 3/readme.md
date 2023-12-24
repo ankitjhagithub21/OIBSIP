@@ -20,3 +20,6 @@ This Todo App allows users to add, edit, and remove tasks. It also supports mark
 - HTML
 - CSS
 - JavaScript
+
+## Live Demo
+('''https://todo-infobyte.netlify.app''')
