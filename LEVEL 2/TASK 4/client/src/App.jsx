@@ -5,6 +5,7 @@ import Login from './pages/Login'
 import Home from './pages/Home'
 import Register from './pages/Register'
 import "./App.css"
+import { Toaster } from 'react-hot-toast'
 
 const App = () => {
  
@@ -15,6 +16,7 @@ const App = () => {
   
   return (
     <BrowserRouter>
+    <Toaster/>
       <Routes>
         <Route path="/" element={user ? <Home /> : <Navigate to="/login" />} />
         <Route path="/login" element={<Login setUserData={setUserData}/>} />

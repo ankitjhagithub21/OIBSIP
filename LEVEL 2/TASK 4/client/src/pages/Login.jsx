@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import Image from '../components/Image'
+import toast from 'react-hot-toast'
 const Login = ({setUserData}) => {
   const navigate = useNavigate()
   const initialData = {
@@ -20,20 +21,21 @@ const Login = ({setUserData}) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const res = await fetch("http://localhost:3000/api/auth/login", {
+      const res = await fetch("https://login-authentication-7cdk.onrender.com/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify(formData)
       })
+      
       const responseData = await res.json();
-      alert(responseData.message)
-
       if (res.status === 200) {
+      
+         toast.success("Login Successfull")
         
         setFormData(initialData)
-        const userRes = await fetch('http://localhost:3000/api/auth/user', {
+        const userRes = await fetch('https://login-authentication-7cdk.onrender.com/api/auth/user', {
           method: 'GET',
           headers: {
            
@@ -47,6 +49,8 @@ const Login = ({setUserData}) => {
         localStorage.setItem('user', JSON.stringify(userData));
         setUserData(userData) 
         navigate("/")
+      }else{
+        toast.error(responseData.message)
       }
 
     } catch (error) {

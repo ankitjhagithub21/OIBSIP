@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Image from '../components/Image'
+import toast from 'react-hot-toast'
 const Register = () => {
   const navigate = useNavigate()
   const initialData = {
@@ -19,7 +20,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const res = await fetch("http://localhost:3000/api/auth/register", {
+      const res = await fetch("https://login-authentication-7cdk.onrender.com/api/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -27,11 +28,13 @@ const Register = () => {
         body: JSON.stringify(data)
       })
       const responseData = await res.json();
-      alert(responseData.message)
+      
       if (res.status == 201) {
-        
+        toast.success(responseData.message)
         setData(initialData)
         navigate("/login")
+      }else{
+        toast.error(responseData.message)
       }
     } catch (error) {
       console.error("Error during register:", error);
